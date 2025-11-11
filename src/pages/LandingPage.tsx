@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Building2, FileText, TrendingUp, MessageSquare, Upload, Sparkles, LayoutDashboard, Star, Check, ChevronDown, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import {
   Accordion,
   AccordionContent,
@@ -93,11 +94,35 @@ export const LandingPage: React.FC = () => {
         <p className="text-center text-sm text-muted-foreground mb-8">
           Trusted by leading property managers and condominiums
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="bg-muted h-12 w-24 rounded"></div>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent>
+            {[
+              "Skyline Properties",
+              "Urban Living Co.",
+              "Harbor View Estates",
+              "Metropolitan Condos",
+              "Riverside Management",
+              "City Heights Group",
+              "Coastal Property Partners",
+              "Downtown Residences"
+            ].map((partner, index) => (
+              <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
+                <div className="flex items-center justify-center p-6">
+                  <div className="text-center opacity-40 hover:opacity-60 transition-opacity">
+                    <Building2 className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
+                    <p className="text-xs font-medium text-muted-foreground">{partner}</p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </section>
 
       {/* Features Section */}
