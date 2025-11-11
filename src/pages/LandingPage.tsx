@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Building2, FileText, TrendingUp, MessageSquare, Upload, Sparkles, LayoutDashboard, Star, Check, ChevronDown } from 'lucide-react';
+import { Building2, FileText, TrendingUp, MessageSquare, Upload, Sparkles, LayoutDashboard, Star, Check, ChevronDown, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -477,17 +477,165 @@ export const LandingPage: React.FC = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="bg-primary py-20 md:py-24">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            Ready to Simplify Your Condominium Management?
+          </h2>
+          <p className="text-lg text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
+            Get started with Domly's AI-powered platform today and turn administrative chaos into automated efficiency.
+          </p>
+          <Button 
+            size="lg" 
+            variant="secondary" 
+            className="bg-background text-foreground hover:bg-background/90 mb-4"
+            onClick={() => navigate('/signup')}
+          >
+            Start Your Free Trial Now
+          </Button>
+          <p className="text-sm text-primary-foreground/80">
+            No credit card required • 14-day free trial • Cancel anytime
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="border-t bg-background">
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <Building2 className="h-5 w-5 text-primary" />
-              <span className="font-semibold text-foreground">Domly</span>
+      <footer className="bg-[#1a1d29] text-white">
+        <div className="container mx-auto px-4 py-12 md:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
+            {/* Brand Column */}
+            <div className="md:col-span-2">
+              <div className="flex items-center gap-2 mb-4">
+                <Building2 className="h-6 w-6 text-primary" />
+                <span className="text-xl font-bold">Domly</span>
+              </div>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                AI-powered property management for modern condominiums.
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground">
-              © 2025 Domly. All rights reserved.
+
+            {/* Product Column */}
+            <div>
+              <h3 className="font-semibold mb-4 text-white">Product</h3>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <a href="#features" className="text-gray-400 hover:text-white transition-colors">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#pricing" className="text-gray-400 hover:text-white transition-colors">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="#security" className="text-gray-400 hover:text-white transition-colors">
+                    Security
+                  </a>
+                </li>
+                <li>
+                  <a href="#integrations" className="text-gray-400 hover:text-white transition-colors">
+                    Integrations
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Company Column */}
+            <div>
+              <h3 className="font-semibold mb-4 text-white">Company</h3>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <a href="#about" className="text-gray-400 hover:text-white transition-colors">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#careers" className="text-gray-400 hover:text-white transition-colors">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#blog" className="text-gray-400 hover:text-white transition-colors">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal Column */}
+            <div>
+              <h3 className="font-semibold mb-4 text-white">Legal</h3>
+              <ul className="space-y-3 text-sm">
+                <li>
+                  <a href="#privacy" className="text-gray-400 hover:text-white transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#terms" className="text-gray-400 hover:text-white transition-colors">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="#cookies" className="text-gray-400 hover:text-white transition-colors">
+                    Cookie Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-gray-400">
+              © 2024 Domly. All rights reserved.
             </p>
+            
+            <div className="flex gap-6">
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
       </footer>
