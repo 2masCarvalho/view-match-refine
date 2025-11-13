@@ -17,7 +17,7 @@ export const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-hero-gradient-start to-hero-gradient-end">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40 container mx-auto px-4 py-5">
+      <header className="sticky top-0 z-50 bg-gradient-to-b from-hero-gradient-start/95 to-hero-gradient-start/90 backdrop-blur supports-[backdrop-filter]:from-hero-gradient-start/80 border-b border-border/20 container mx-auto px-4 py-5">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Building2 className="h-6 w-6 text-primary" />
