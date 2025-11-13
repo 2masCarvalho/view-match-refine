@@ -10,6 +10,7 @@ import { LoginPage } from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import { AtivosPage } from "./pages/AtivosPage";
 import { AtivoDetailPage } from "./pages/AtivoDetailPage";
+import { NotificacoesPage } from "./pages/NotificacoesPage";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -40,6 +41,16 @@ const App = () => (
                 <ProtectedRoute>
                   <Index>
                     <AtivosPage />
+                  </Index>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/condominios/:id/notificacoes"
+              element={
+                <ProtectedRoute>
+                  <Index>
+                    <NotificacoesPage />
                   </Index>
                 </ProtectedRoute>
               }
