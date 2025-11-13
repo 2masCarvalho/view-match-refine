@@ -25,7 +25,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const login = async (email: string, password: string) => {
     // Mock login - replace with actual authentication
-    const mockUser = { email, id: '1' };
+    const mockUser = { email, id: '1', name: email.split('@')[0] };
     setUser(mockUser);
     localStorage.setItem('user', JSON.stringify(mockUser));
   };

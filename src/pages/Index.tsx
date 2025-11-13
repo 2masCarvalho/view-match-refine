@@ -1,7 +1,20 @@
-import { LandingPage } from './LandingPage';
+import { ReactNode } from 'react';
+import { CondominiosProvider } from '@/context/CondominiosContext';
+import { AtivosProvider } from '@/context/AtivosContext';
+import { CondominiosPage } from './CondominiosPage';
 
-const Index = () => {
-  return <LandingPage />;
+interface IndexProps {
+  children?: ReactNode;
+}
+
+const Index = ({ children }: IndexProps) => {
+  return (
+    <CondominiosProvider useMock={true}>
+      <AtivosProvider>
+        {children || <CondominiosPage />}
+      </AtivosProvider>
+    </CondominiosProvider>
+  );
 };
 
 export default Index;
