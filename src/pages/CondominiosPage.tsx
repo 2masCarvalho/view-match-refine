@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // Importa o supabase client criado no teu projeto
-import { supabase } from "@/supabase-client";
+import { supabase } from "@/supabaseClient";
 
 import { CondominioForm } from "@/components/CondominioForm/CondominioForm";
 import { CondominioFormData } from "@/components/CondominioForm/validation";

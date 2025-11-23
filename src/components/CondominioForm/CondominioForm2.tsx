@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { supabase } from "@/supabase-client";
+import { supabase } from "@/supabaseClient";
 
 function CondominioForm2() {
   // State to hold form data
